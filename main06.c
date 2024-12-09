@@ -5,15 +5,20 @@ int found(char matn[], char soz[]){
     int n = strlen(matn); 
     int m = strlen(soz);   
 
-    for(int i = 0; i <= n - m; i++){  
-        for(int j = 0; j < m; j++){
+    if(m > n){
+       return 0;
+    }
+
+    for(int i = 0; i <= n - m; i++){
+        int j;
+        if(j == m){
+           return 1;
+        }
+
+        for(j = 0; j < m; j++){
             if(matn[i + j] != soz[j]){
                break; 
             }
-        }
-
-        if(j == m){
-           return 1;
         }
     }
     return 0;  
@@ -24,9 +29,9 @@ int main(){
     char soz[] = "Najot";
 
     if(found(matn, soz)){
-       printf("mavjud\n");
+       printf(" mavjud\n");
     }else{
-       printf(" mavjud emas\n");
+       printf("mavjud emas\n");
     }
     return 0;
 }
