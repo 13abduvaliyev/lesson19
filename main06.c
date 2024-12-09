@@ -5,10 +5,8 @@ int found(char matn[], char soz[]){
     int n = strlen(matn); 
     int m = strlen(soz);   
 
-    for(int i = 0; i <= n - m; i++){
-        int j;
-        
-        for(j = 0; j < m; j++){
+    for(int i = 0; i <= n - m; i++){  
+        for(int j = 0; j < m; j++){
             if(matn[i + j] != soz[j]){
                break; 
             }
